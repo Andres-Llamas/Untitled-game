@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -38,12 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Land
-    uniqueID: 2597435815
-    locked: 0
   - name: Enemies
     uniqueID: 1386777887
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Land
+    uniqueID: 2597435815
     locked: 0

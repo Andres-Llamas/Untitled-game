@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: a3cad2e663db3da469b9bc581c845d4b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Silent con vara hielo_0
+    21300002: Silent con vara hielo_1
+    21300004: Silent con vara hielo_2
+    21300006: Silent con vara hielo_3
+    21300008: Silent con vara hielo_4
+    21300010: Silent con vara hielo_5
+    21300012: Silent con vara hielo_6
+    21300014: Silent con vara hielo_7
+    21300016: Silent con vara hielo_8
+    21300018: Silent con vara hielo_9
+    21300020: Silent con vara hielo_10
+    21300022: Silent con vara hielo_11
+    21300024: Silent con vara hielo_12
+    21300026: Silent con vara hielo_13
+    21300028: Silent con vara hielo_14
+    21300030: Silent con vara hielo_15
+    21300032: Silent con vara hielo_16
+    21300034: Silent con vara hielo_17
+    21300036: Silent con vara hielo_18
+    21300038: Silent con vara hielo_19
+    21300040: Silent con vara hielo_20
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Silent con vara hielo_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 48
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9f9bc15ba457443a793cc997292bd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 48
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7f40b65aa179b4dbab387293a962f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 48
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedeb69e6acf72340aebe2e891c9f159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 48
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc30d1aa137d964abcf23f32e4a2659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 50
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73092cad1b5eb604c998ce557d437e14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 49
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6dd6e092d2dde4db46d4eae4d9285f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 46
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397a4f33348884249ac28d9f649c4c2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 27
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daa9f828639a0f4fb8adbb4506bf18a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 28
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a080a643ef484234aa47b31798ecd07f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 27
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890bfa9ce777d0846b319df93f7c2e95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_10
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 27
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798cac1fc8c52f643b1f07076f28eeed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 28
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515dabf87851edb4482792b7f4753d59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 27
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7263728a0e692468fc5851176af98a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_13
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 39
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472d30810536b4f4399c584703ef0f3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 31
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f374a110a9ee4cc47b2d64b1238cef70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a482ac98739a146bc4bc4023fe00fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 20
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf48fde61597c1479c44c6cc3ddeef3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 20
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5425b029b1600fd4a88f255b7fdc5ad0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 4
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9947154a8e224264c97ffb82e6b2bacc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 4
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfce0f82458ace4e8deb8ccaab608a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_20
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 4
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c8ba8da34821d4c969afdf4e3499d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 07733930873012e498443de3402a9c4f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

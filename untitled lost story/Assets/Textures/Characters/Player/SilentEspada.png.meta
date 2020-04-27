@@ -533,9 +533,9 @@ TextureImporter:
       name: SilentEspada_20
       rect:
         serializedVersion: 2
-        x: 8
+        x: 7
         y: 48
-        width: 14
+        width: 15
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -553,9 +553,9 @@ TextureImporter:
       name: SilentEspada_21
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 48
-        width: 16
+        width: 17
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -573,9 +573,9 @@ TextureImporter:
       name: SilentEspada_22
       rect:
         serializedVersion: 2
-        x: 53
+        x: 52
         y: 47
-        width: 28
+        width: 29
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -593,9 +593,9 @@ TextureImporter:
       name: SilentEspada_23
       rect:
         serializedVersion: 2
-        x: 86
+        x: 85
         y: 48
-        width: 23
+        width: 24
         height: 18
       alignment: 9
       pivot: {x: 0.3056677, y: 0.5}

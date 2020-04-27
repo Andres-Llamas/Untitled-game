@@ -6,11 +6,15 @@ public class Sword_collision : MonoBehaviour
 {
     CircleCollider2D circleColl;
     Animator_manager animManager;
+    Rigidbody2D rb;
+
+    public int PushUpFroce = 20;
 
     void Start()
     {
         circleColl = GetComponent<CircleCollider2D>();
         animManager = GetComponentInParent<Animator_manager>();
+        rb = GetComponentInParent<Rigidbody2D>();
         circleColl.enabled = false;
     }
 

@@ -8,6 +8,7 @@ public class Functios_for_animator : MonoBehaviour
 
     Sword_collision swordCollision;
     Player_collision playerBox;
+    Animator_manager anim;
 
     public bool inAttackAnimation;
 
@@ -15,6 +16,7 @@ public class Functios_for_animator : MonoBehaviour
     {
         swordCollision = GetComponentInChildren<Sword_collision>();
         playerBox = GetComponentInChildren<Player_collision>();
+        anim = GetComponent<Animator_manager>();
     }
 
     public void ToLoockSpriteFlipX()//in Animator_manager
@@ -29,26 +31,37 @@ public class Functios_for_animator : MonoBehaviour
 
     public void ToEnableSwordCollision()// in Sword_collision
     {
-        swordCollision.SendMessage("ToEnable");
+        swordCollision.ToEnable();
     }
 
     public void ToToDisableSwordCollision()
     {
-        swordCollision.SendMessage("ToDisable");
+        swordCollision.ToDisable();
     }
 
     public void ToEnableSwordDownCollision()
     {
-        swordCollision.SendMessage("ToEnableSwordDown");
+        swordCollision.ToEnableSwordDown();
     }
 
     public void ToNormalSizeBoxCollider()
     {
-        playerBox.SendMessage("NormalSizeCollider");
+        playerBox.NormalSizeCollider();
     }
 
     public void ToChangeBoxCollider()
     {
-        playerBox.SendMessage("BoxColliderToSwordAttackDown");
+        playerBox.BoxColliderToSwordAttackDown();
+    }
+
+    public void ToEnambleReleaseStaff()// to the animation of ice staff mega power
+    {
+        anim.ReleaseStaff(true);
+    }
+
+    public void ToDesableReleaseStaff()
+    {
+        anim.ReleaseStaff(false);
+        Debug.Log("Boooom");
     }
 }

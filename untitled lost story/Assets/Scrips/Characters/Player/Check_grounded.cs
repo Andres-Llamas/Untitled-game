@@ -10,8 +10,9 @@ public class Check_grounded : MonoBehaviour
     public LayerMask ground;
 
     Animator_manager animManager;
-    Player_controller player;
+    Player_controller playerController;
     Foot_collider footCollider;
+    Player_life playerLife;
 
     private void Update()
     {
@@ -21,21 +22,22 @@ public class Check_grounded : MonoBehaviour
     private void Awake()
     {
         animManager = GetComponentInParent<Animator_manager>();
-        player = GetComponentInParent<Player_controller>();
+        playerController = GetComponentInParent<Player_controller>();
         footCollider = GetComponent<Foot_collider>();
+        playerLife = GetComponentInParent<Player_life>();
     }
 
-    void DetectGround()
+   void DetectGround()
     {
-        if (Physics2D.Raycast(this.transform.position, Vector2.down, 0.70f, ground))
+        if (Physics2D.Raycast(this.transform.position, Vector2.down, 0.73f, ground))
         {
-            animManager.SendMessage("AnimNearGround", 1);// to detect near the ground
+            animManager.AnimNearGround(true);// to detect near the ground
+            
             footCollider.EnableFootCollider();//to desable foot collider during jump to aviod errors
         }
         else
         {
-            animManager.SendMessage("AnimNearGround", 2);
-            footCollider.DisableFootCollider();//to enable foot collider during jump to aviod errors
+            animManager.AnimNearGround(false);
         }
     }
 
@@ -43,16 +45,21 @@ public class Check_grounded : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            player.grounded = true;
-            animManager.SendMessage("AnimJump", 2);//to call Jump animation, 1 is true, other is to false.
+            playerController.grounded = true;
+            check_grounded = true;
+            playerLife.duringAttack = false;// to desunlock moovement during enemie attack
+            animManager.DamageAnimation(false);
+            animManager.AnimJump(true);//this is to active "Ground" parameter, no to call jump animation directly
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 8)
         {
-            player.grounded = false;
-            animManager.SendMessage("AnimJump", 1);//to call Jump animation, 1 is true, other is to false.
+            check_grounded = false;
+            playerController.grounded = false;
+            animManager.AnimJump(false);//this is to active "Ground" parameter, no to call jum animation directly
+            footCollider.DisableFootCollider();//to enable foot collider during jump to aviod errors
         }
     }
 }

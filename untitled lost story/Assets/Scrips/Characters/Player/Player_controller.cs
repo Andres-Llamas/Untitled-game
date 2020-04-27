@@ -7,10 +7,14 @@ public class Player_controller : MonoBehaviour
     public float speed;
     public float jumpForce;
     public float gravity;
-    public bool grounded;        
+    public bool grounded;
+    public int count = 1;
 
     Rigidbody2D rb;
     Animator_manager animManager;
+    Player_life playerLife;
+    Items_player_animations itemsAnim;
+    Menu_manager menuManager;
 
     public LayerMask groundMask;
 
@@ -18,18 +22,26 @@ public class Player_controller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animManager = GetComponent<Animator_manager>();
+        playerLife = GetComponent<Player_life>();
+        itemsAnim = GetComponent<Items_player_animations>();
+        menuManager = GetComponent<Menu_manager>();
     }
 
     void Update()
     {
         Attack();
         AttackDown();
+
+        itemsAnim.AnimationsWithItem(menuManager.equipIceStaff);// to enable ice staff animations,
     }
 
     private void FixedUpdate()
     {
-        Walk();
-        Jump();
+        if (playerLife.duringAttack == false)//to loock moovement during attack. Is reactive during check_ground script.
+        {
+            Walk();
+            Jump();
+        }
         Gravity();
         Friction();
     }
@@ -57,18 +69,38 @@ public class Player_controller : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("D-pad X") > 0)
         {
+            if (Input.GetButton("Run"))//to tun
+            {
+                speed = 7;
+                animManager.AnimRun(true);
+            }
+            else
+            {
+                speed = 4;
+                animManager.AnimRun(false);
+            }
             rb.velocity = new Vector2(speed, rb.velocity.y);
-            animManager.SendMessage("AnimWalk", 1);//to call walk animation, 1 is to enable, 2 is to disable.
-            animManager.SendMessage("FlipSpriteX", 2);//to not flip scrips.
+            animManager.AnimWalk(true);//to call walk animation,            
+            animManager.FlipSpriteX(false);//to not flip scrips.
         }
         else if (Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("D-pad X") < 0)
         {
+            if (Input.GetButton("Run"))//to tun
+            {
+                speed = 7;
+                animManager.AnimRun(true);
+            }
+            else
+            {
+                speed = 4;
+                animManager.AnimRun(false);
+            }
             rb.velocity = new Vector2(-speed, rb.velocity.y);
-            animManager.SendMessage("AnimWalk", 1);
-            animManager.SendMessage("FlipSpriteX", 1);//to flip scrips.
+            animManager.AnimWalk(true);
+            animManager.FlipSpriteX(true);//to flip scrips.
         }
         else
-            animManager.SendMessage("AnimWalk", 2);
+            animManager.AnimWalk(false);
     }
 
     void Jump()
@@ -83,21 +115,27 @@ public class Player_controller : MonoBehaviour
     {
         if(Input.GetButtonDown("Attack") && grounded)
         {
-            animManager.SendMessage("AttackTrigger");
+            animManager.AttackTrigger();
         }
     }
 
     void AttackDown()
     {
-        int count = 1;
-        if (Input.GetButtonDown("Attack") && !grounded && count > 0)
+        if (menuManager.equipIceStaff == false)
         {
-            animManager.SendMessage("AttackDownTrigger");
-            count -= 1;
-        }
-        else if(grounded)
-        {
-            count = 1;
+            if (Input.GetButtonDown("Attack") && grounded == false && playerLife.duringAttack == false)
+            {
+                if (count == 1)
+                {
+                    count = 0;
+                    animManager.AttackDownTrigger();
+                    rb.velocity = Vector2.up * 11f;
+                }
+            }
+            else if (grounded)
+            {
+                count = 1;
+            }
         }
     }
 }
