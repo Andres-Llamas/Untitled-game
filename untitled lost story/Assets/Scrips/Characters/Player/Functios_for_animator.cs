@@ -12,7 +12,12 @@ public class Functios_for_animator : MonoBehaviour
 
     public bool inAttackAnimation;
 
-    private void Start()
+    public GameObject iceBall;
+    public GameObject Hyper_iceball;
+    public Transform place;
+    public Transform HyperBallRotation;
+
+    private void Awake()
     {
         swordCollision = GetComponentInChildren<Sword_collision>();
         playerBox = GetComponentInChildren<Player_collision>();
@@ -63,5 +68,15 @@ public class Functios_for_animator : MonoBehaviour
     {
         anim.ReleaseStaff(false);
         Debug.Log("Boooom");
+    }
+
+    public void ToLaunchIceBall()
+    {
+        Instantiate(iceBall, place.position, place.rotation);
+    }
+
+    public void ToLaunchHyperIceBall()
+    {
+        Instantiate(Hyper_iceball, HyperBallRotation.position, HyperBallRotation.rotation);
     }
 }

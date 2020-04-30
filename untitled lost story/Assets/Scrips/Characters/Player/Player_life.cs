@@ -11,7 +11,7 @@ public class Player_life : MonoBehaviour
 
     SpriteRenderer sprite;
 
-    private void Start()
+    private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
     }

@@ -7,6 +7,7 @@ public class Player_controller : MonoBehaviour
     public float speed;
     public float jumpForce;
     public float gravity;
+    public float friction = 0.8f;
     public bool grounded;
     public int count = 1;
 
@@ -57,7 +58,7 @@ public class Player_controller : MonoBehaviour
     void Friction()
     {
         Vector2 fixedVelocity = rb.velocity;
-        fixedVelocity.x *= 0.8f;
+        fixedVelocity.x *= friction;
 
         if (grounded)
         {
@@ -114,6 +115,10 @@ public class Player_controller : MonoBehaviour
     void Attack()
     {
         if(Input.GetButtonDown("Attack") && grounded)
+        {
+            animManager.AttackTrigger();
+        }
+        else if(Input.GetButtonDown("Attack") && menuManager.equipIceStaff)//to attack during jump just with the ice staff
         {
             animManager.AttackTrigger();
         }

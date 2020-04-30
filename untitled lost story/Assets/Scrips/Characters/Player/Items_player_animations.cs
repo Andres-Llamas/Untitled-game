@@ -6,10 +6,11 @@ public class Items_player_animations : MonoBehaviour
 {
     Animator_manager animManager;
 
-    void Start()
+    private void Awake()
     {
         animManager = GetComponent<Animator_manager>();
     }
+
 
     public void AnimationsWithItem(bool WithIceStaff)
     {

@@ -22,11 +22,16 @@ public class Animator_manager : MonoBehaviour
     const string MANTAIN_STAFF = "mantain staff";
     const string RELEASE_STAFF = "release staff";
 
-    void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         functionsAnim = GetComponent<Functios_for_animator>();
+    }
+
+    void Start()
+    {
+        
     }
 
     public void FlipSpriteX(bool count)

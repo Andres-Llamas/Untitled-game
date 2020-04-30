@@ -6,8 +6,7 @@ public class Player_collision : MonoBehaviour
 {
     BoxCollider2D box;
 
-
-    void Start()
+    private void Awake()
     {
         box = GetComponent<BoxCollider2D>();
     }
@@ -28,5 +27,4 @@ public class Player_collision : MonoBehaviour
         box.offset = new Vector2(0.03f, 0.18f);
         box.size = new Vector2(0.77f, 0.63f);
     }
-
 }

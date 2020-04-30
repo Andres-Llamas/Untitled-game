@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Sword
   - Enemy
+  - Ice ball
+  - Hyper ice ball
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Ice
   - 
   - 
   - 
@@ -40,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: water
+    uniqueID: 506205679
+    locked: 0
   - name: Enemies
     uniqueID: 1386777887
     locked: 0

@@ -9,10 +9,15 @@ public class Ice_staff_attack : MonoBehaviour
 
     public int count = 3;
 
-    void Start()
+    private void Awake()
     {
         menuMan = GetComponent<Menu_manager>();
         anim = GetComponent<Animator_manager>();
+    }
+
+    void Start()
+    {
+
     }
 
     void Update()

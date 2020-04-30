@@ -7,10 +7,13 @@ public class Enemy_behaviour : MonoBehaviour
     float timeOfChange;
     public float delay;
     public float speed;
+    public bool frozen;
+    public float velocityDuringFrozen = 0;
 
     Rigidbody2D enemyRb;
     Animator anim;
     SpriteRenderer sprite;
+    Enemy_life life;
 
     const string WALK = "movement";
     const string DEAD = "dead";
@@ -20,28 +23,40 @@ public class Enemy_behaviour : MonoBehaviour
         enemyRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        life = GetComponent<Enemy_life>();
     }
 
     void Update()
     {
-        enemyRb.velocity = Vector2.right * speed;
-        anim.SetBool(WALK, true);
-
-        if (speed < -1)
+        if (frozen == false)
         {
-            sprite.flipX = true;
+            anim.enabled = true;
+            life.NormalColor();
+            enemyRb.velocity = Vector2.right * speed;
+
+            anim.SetBool(WALK, true);
+
+            if (speed < -1)
+            {
+                sprite.flipX = true;
+            }
+            else
+            {
+                sprite.flipX = false;
+            }
+
+            if (timeOfChange < Time.time)
+            {// este es un timer para medir el tiempo de cambiode dirección
+                speed *= -1;
+                anim.SetBool(WALK, true);
+
+                timeOfChange = Time.time + delay;
+            }
         }
         else
         {
-            sprite.flipX = false;
-        }
-
-        if (timeOfChange < Time.time)
-        {// este es un timer para medir el tiempo de cambiode dirección
-            speed *= -1;
-            anim.SetBool(WALK, true);
-
-            timeOfChange = Time.time + delay;
+            enemyRb.velocity = Vector2.right * velocityDuringFrozen;
+            anim.enabled = false;
         }
     }
 }

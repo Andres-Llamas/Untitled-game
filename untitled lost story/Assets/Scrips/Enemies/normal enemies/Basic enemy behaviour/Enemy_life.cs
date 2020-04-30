@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Enemy_life : MonoBehaviour
 {
-    public int life = 3;
+    public float life = 3;
     public int EnemyKnockBack = 15;
+    public bool onAttack;
+    bool HyperIceBall;
 
     Rigidbody2D rb;
     SpriteRenderer sprite;
+    Enemy_behaviour enemyBehaviour;
 
     public Extras_functions player;
     public Player_controller playerController;
@@ -20,6 +23,7 @@ public class Enemy_life : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        enemyBehaviour = GetComponent<Enemy_behaviour>();
     }
 
     void Update()
@@ -27,6 +31,20 @@ public class Enemy_life : MonoBehaviour
         if(checkGround.check_grounded)
         {
             count = 3;
+        }
+
+        if(onAttack)
+        {
+            Invoke("NormalColor", 1f);
+        }
+
+        if(enemyBehaviour.frozen && HyperIceBall ==false)
+        {
+            Invoke("QuitFrozen", 2.5f);
+        }
+        else if(enemyBehaviour.frozen && HyperIceBall == true)
+        {
+            Invoke("QuitFrozen", 4f);
         }
     }
 
@@ -43,12 +61,32 @@ public class Enemy_life : MonoBehaviour
                 player.UpSwrodDamageJump();
                 count -= 1;
             }
-            Invoke("NormalColor", 0.4f);
+        }
+
+        else if(collision.gameObject.tag == "Ice ball")
+        {
+            sprite.color = Color.blue;
+            enemyBehaviour.frozen = true;
+        }
+
+        else if(collision.gameObject.tag == "Hyper ice ball")
+        {
+            sprite.color = Color.blue;
+            enemyBehaviour.frozen = true;
+            HyperIceBall = true;
+            life -= 0.5f;
         }
     }
 
-    void NormalColor()
+    public void NormalColor()
     {
         sprite.color = Color.white;
+        onAttack = false;
+    }
+
+    void QuitFrozen()
+    {
+        enemyBehaviour.frozen = false;
+        HyperIceBall = false;
     }
 }

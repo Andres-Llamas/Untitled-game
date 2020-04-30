@@ -5,10 +5,14 @@ using UnityEngine;
 public class Foot_collider : MonoBehaviour
 {
     EdgeCollider2D foot_collider;
+    private void Awake()
+    {
+        foot_collider = GetComponent<EdgeCollider2D>();
+    }
 
     private void Start()
     {
-        foot_collider = GetComponent<EdgeCollider2D>();
+        
     }
 
     public void DisableFootCollider()

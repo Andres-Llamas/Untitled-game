@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Extras_functions : MonoBehaviour
 {
-    Rigidbody2D rb; 
+    Rigidbody2D rb;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()

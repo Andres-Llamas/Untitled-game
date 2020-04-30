@@ -11,8 +11,6 @@ TextureImporter:
     21300012: Ice stoff_6
     21300014: Ice stoff_7
     21300016: Ice stoff_8
-    21300018: Ice stoff_9
-    21300020: Ice stoff_10
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -56,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,16 +109,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 43
-        width: 5
+        width: 11
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68496831ecb69f14b93624df3551dd89
+      spriteID: e41d5dd6ebff71c48b8100b2a93c9401
       vertices: []
       indices: 
       edges: []
@@ -130,17 +128,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 32
-        width: 15
-        height: 15
+        y: 34
+        width: 13
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 598253b4e93e71e4f8fa21dd1890084f
+      spriteID: 603425bb22544764b99c9914b7e0b123
       vertices: []
       indices: 
       edges: []
@@ -149,18 +147,18 @@ TextureImporter:
       name: Ice stoff_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 32
-        width: 13
-        height: 16
+        x: 36
+        y: 34
+        width: 12
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bdc5d47af5c69342a31882845e69abc
+      spriteID: 472460e3a949ca140bc3e6330957a9b3
       vertices: []
       indices: 
       edges: []
@@ -170,17 +168,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 22
-        height: 19
+        y: 15
+        width: 23
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b1f4da24c88b0f4da5f04efdc7a7909
+      spriteID: d62fc4a19d1612646bc2a894f015f6eb
       vertices: []
       indices: 
       edges: []
@@ -189,18 +187,18 @@ TextureImporter:
       name: Ice stoff_4
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 5
-        height: 7
+        x: 39
+        y: 15
+        width: 9
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c649338a6a933479a3bd8c00a9c356
+      spriteID: 827e5a24feffad546be875695dbf2d59
       vertices: []
       indices: 
       edges: []
@@ -209,18 +207,18 @@ TextureImporter:
       name: Ice stoff_5
       rect:
         serializedVersion: 2
-        x: 37
-        y: 0
-        width: 13
-        height: 18
+        x: 39
+        y: 22
+        width: 9
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0d0b459550270b4fb497339b3cba11b
+      spriteID: e53a00ab206782a47a823a930c0d8abc
       vertices: []
       indices: 
       edges: []
@@ -229,18 +227,18 @@ TextureImporter:
       name: Ice stoff_6
       rect:
         serializedVersion: 2
-        x: 5
-        y: 43
+        x: 4
+        y: 3
         width: 5
-        height: 7
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82473ca08f4a7de45a1f750ea111574d
+      spriteID: 47f06f5c37c4fd54e82561d3f4d1c50e
       vertices: []
       indices: 
       edges: []
@@ -249,18 +247,18 @@ TextureImporter:
       name: Ice stoff_7
       rect:
         serializedVersion: 2
-        x: 10
-        y: 3
-        width: 3
-        height: 7
+        x: 23
+        y: 15
+        width: 12
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8301c3b470b8d6348a19031e845c87f6
+      spriteID: ef6eae5bcf9d398429954d6338e73291
       vertices: []
       indices: 
       edges: []
@@ -269,58 +267,18 @@ TextureImporter:
       name: Ice stoff_8
       rect:
         serializedVersion: 2
-        x: 17
-        y: 3
-        width: 5
-        height: 7
+        x: 39
+        y: 7
+        width: 9
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be537c35efa5d7a4ca34b573ff04a8ad
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ice stoff_9
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 3
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c78846a2659a93b4ab26ee413f785b50
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ice stoff_10
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 13
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ed37c20f66fb540b20b1dfd1377cf8
+      spriteID: 31b9f7743d7cee74b94d65742038c583
       vertices: []
       indices: 
       edges: []
@@ -328,7 +286,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 84c5116f292c8de4faeef9bbcccc50a2
+    spriteID: 1a8ea67b81dc76d469db50bcee6312f2
     vertices: []
     indices: 
     edges: []

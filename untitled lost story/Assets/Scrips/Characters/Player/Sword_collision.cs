@@ -10,7 +10,7 @@ public class Sword_collision : MonoBehaviour
 
     public int PushUpFroce = 20;
 
-    void Start()
+    private void Awake()
     {
         circleColl = GetComponent<CircleCollider2D>();
         animManager = GetComponentInParent<Animator_manager>();

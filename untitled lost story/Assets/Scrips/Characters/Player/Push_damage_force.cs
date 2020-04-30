@@ -12,7 +12,7 @@ public class Push_damage_force : MonoBehaviour
     public float pushForce;
     public float pushUpForce;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playrLife = GetComponent<Player_life>();

@@ -23,6 +23,7 @@ TextureImporter:
     21300036: Silent con vara hielo_18
     21300038: Silent con vara hielo_19
     21300040: Silent con vara hielo_20
+    21300042: Silent con vara hielo_21
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -119,9 +120,9 @@ TextureImporter:
       name: Silent con vara hielo_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 2
         y: 48
-        width: 12
+        width: 14
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -130,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a9f9bc15ba457443a793cc997292bd1
+      spriteID: 1a9f5f1214c5ccb488df51d7d6b41260
       vertices: []
       indices: 
       edges: []
@@ -150,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad7f40b65aa179b4dbab387293a962f8
+      spriteID: 720335a6fc43e154eaacb49e02ce05d2
       vertices: []
       indices: 
       edges: []
@@ -170,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fedeb69e6acf72340aebe2e891c9f159
+      spriteID: 24bf111dd7feb004eac1e60f0d0ffcf5
       vertices: []
       indices: 
       edges: []
@@ -190,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dc30d1aa137d964abcf23f32e4a2659
+      spriteID: 6d3d74b29a98f4f4fa59efb2878fae1f
       vertices: []
       indices: 
       edges: []
@@ -199,9 +200,9 @@ TextureImporter:
       name: Silent con vara hielo_4
       rect:
         serializedVersion: 2
-        x: 65
+        x: 66
         y: 50
-        width: 14
+        width: 13
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -210,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73092cad1b5eb604c998ce557d437e14
+      spriteID: 1acc9d8795d83fd4e8106cb073206162
       vertices: []
       indices: 
       edges: []
@@ -221,7 +222,7 @@ TextureImporter:
         serializedVersion: 2
         x: 83
         y: 49
-        width: 17
+        width: 14
         height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -230,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac6dd6e092d2dde4db46d4eae4d9285f
+      spriteID: 5bd0bb78c1c76a74fa676a62ad2962ae
       vertices: []
       indices: 
       edges: []
@@ -239,9 +240,9 @@ TextureImporter:
       name: Silent con vara hielo_6
       rect:
         serializedVersion: 2
-        x: 108
+        x: 106
         y: 46
-        width: 7
+        width: 9
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -250,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397a4f33348884249ac28d9f649c4c2b
+      spriteID: 84a5065ae6dba5346b9000d7681e8e3d
       vertices: []
       indices: 
       edges: []
@@ -261,16 +262,16 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 27
-        width: 14
+        width: 16
         height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.53000003, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6daa9f828639a0f4fb8adbb4506bf18a
+      spriteID: 1ce1ebec9700a5642b8c3e8e7eb99a46
       vertices: []
       indices: 
       edges: []
@@ -281,8 +282,8 @@ TextureImporter:
         serializedVersion: 2
         x: 18
         y: 28
-        width: 16
-        height: 17
+        width: 17
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,7 +291,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a080a643ef484234aa47b31798ecd07f
+      spriteID: 31fb18ed5c567a14488542866983505d
       vertices: []
       indices: 
       edges: []
@@ -301,7 +302,7 @@ TextureImporter:
         serializedVersion: 2
         x: 35
         y: 27
-        width: 14
+        width: 15
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -310,7 +311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 890bfa9ce777d0846b319df93f7c2e95
+      spriteID: b7b1ffcb2dc213c42a49bca025e71373
       vertices: []
       indices: 
       edges: []
@@ -321,8 +322,8 @@ TextureImporter:
         serializedVersion: 2
         x: 51
         y: 27
-        width: 13
-        height: 17
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 798cac1fc8c52f643b1f07076f28eeed
+      spriteID: be6c371e85a2e4e4eac4efbb39f5f116
       vertices: []
       indices: 
       edges: []
@@ -341,8 +342,8 @@ TextureImporter:
         serializedVersion: 2
         x: 67
         y: 28
-        width: 14
-        height: 17
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,7 +351,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515dabf87851edb4482792b7f4753d59
+      spriteID: 87c052c194011e045889d4da47f14f30
       vertices: []
       indices: 
       edges: []
@@ -361,7 +362,7 @@ TextureImporter:
         serializedVersion: 2
         x: 82
         y: 27
-        width: 15
+        width: 17
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -370,7 +371,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de7263728a0e692468fc5851176af98a
+      spriteID: a020bdb8eda1c9e47af86837dade6d06
       vertices: []
       indices: 
       edges: []
@@ -390,7 +391,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 472d30810536b4f4399c584703ef0f3f
+      spriteID: ec19a4e250000bf4c8e1a31d0d08b5a8
       vertices: []
       indices: 
       edges: []
@@ -410,7 +411,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f374a110a9ee4cc47b2d64b1238cef70
+      spriteID: ca5185a44ffdc8c4c9289eea886a42e6
       vertices: []
       indices: 
       edges: []
@@ -430,33 +431,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78a482ac98739a146bc4bc4023fe00fa
+      spriteID: 7516f9387363e734ba2b45a38bc6bca3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Silent con vara hielo_16
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 20
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cf48fde61597c1479c44c6cc3ddeef3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Silent con vara hielo_17
       rect:
         serializedVersion: 2
         x: 25
@@ -470,13 +451,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5425b029b1600fd4a88f255b7fdc5ad0
+      spriteID: be67ba371fd542a449e1f857c19355b2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silent con vara hielo_18
+      name: Silent con vara hielo_17
       rect:
         serializedVersion: 2
         x: 31
@@ -490,7 +471,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9947154a8e224264c97ffb82e6b2bacc
+      spriteID: 77741e8e566743241b54f022a5597bbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_18
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 4
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397265efc52d43c4a990478f4a6de18e
       vertices: []
       indices: 
       edges: []
@@ -499,9 +500,9 @@ TextureImporter:
       name: Silent con vara hielo_19
       rect:
         serializedVersion: 2
-        x: 55
+        x: 77
         y: 4
-        width: 20
+        width: 28
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -510,7 +511,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dfce0f82458ace4e8deb8ccaab608a3
+      spriteID: afdfd4d1ff228a941af51d000ee356e9
       vertices: []
       indices: 
       edges: []
@@ -519,10 +520,10 @@ TextureImporter:
       name: Silent con vara hielo_20
       rect:
         serializedVersion: 2
-        x: 79
-        y: 4
-        width: 24
-        height: 18
+        x: 108
+        y: 13
+        width: 7
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,7 +531,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26c8ba8da34821d4c969afdf4e3499d0
+      spriteID: f1b546c5e0d0c0146a3431bfb4c280c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silent con vara hielo_21
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbecac9bafee2e4d96020885fc1fef7
       vertices: []
       indices: 
       edges: []
@@ -538,7 +559,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 07733930873012e498443de3402a9c4f
+    spriteID: bb444c290807ec24a989130807566220
     vertices: []
     indices: 
     edges: []
