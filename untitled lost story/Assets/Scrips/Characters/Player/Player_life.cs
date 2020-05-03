@@ -8,17 +8,21 @@ public class Player_life : MonoBehaviour
     public bool invencibility = false;
     public bool duringAttack = false;
     public float invencibilityTime = 2.5f;
+    public bool colorRed;
 
     SpriteRenderer sprite;
+    Check_grounded groundScript;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
+        groundScript = GetComponentInChildren<Check_grounded>();
     }
 
     private void Update()
     {
-        ChangeColorDuringInvencibility();
+        ChangeColorDuringAttack();
+        ChangeTransparencyDuringInvencibility();
     }
 
     public void Damage(int damage)
@@ -40,9 +44,22 @@ public class Player_life : MonoBehaviour
         StopCoroutine(StopInvencibility());
     }
 
-    void ChangeColorDuringInvencibility()
+    void ChangeColorDuringAttack()
     {
-        if (invencibility)
+        if(duringAttack)
+        {
+            sprite.color = Color.red;
+            colorRed = true;
+        }
+        else
+        {
+            colorRed = false;
+        }
+    }
+
+    void ChangeTransparencyDuringInvencibility()
+    {
+        if (invencibility && colorRed == false)
         {
             int count = 4;
             while (count > 0)

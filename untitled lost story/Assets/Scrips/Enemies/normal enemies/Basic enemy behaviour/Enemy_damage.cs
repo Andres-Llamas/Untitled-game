@@ -9,6 +9,7 @@ public class Enemy_damage : MonoBehaviour
     public Player_life playerLife;
     public Push_damage_force pushForce;
     public Player_controller playerController;
+    public Check_grounded ground;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,12 +21,6 @@ public class Enemy_damage : MonoBehaviour
                 pushForce.DamageForce(side);
                 playerLife.duringAttack = true;
                 playerLife.Damage(damageMelee);
-            }
-
-            if (collision.transform.position.y > this.transform.position.y + 1 && playerLife.invencibility == false)
-            {
-                float side = Mathf.Sign(this.transform.position.x - collision.transform.position.x);// the direction of the force
-                pushForce.UpDamageForce(side);
             }
         }
     }

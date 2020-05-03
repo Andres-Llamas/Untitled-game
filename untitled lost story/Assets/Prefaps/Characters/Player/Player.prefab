@@ -160,10 +160,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   check_grounded: 0
+  checkIce: 0
   rayDistance: 0.65
   ground:
     serializedVersion: 2
     m_Bits: 256
+  Ice:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &4102796632885235696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,11 +268,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4102796633426266221}
+  - component: {fileID: 4027142361953398041}
   - component: {fileID: 2303731386335038096}
   - component: {fileID: 135513398273659962}
   - component: {fileID: 8585257838987453223}
   - component: {fileID: 4102796633426266220}
   - component: {fileID: 1117784691355864125}
+  - component: {fileID: 6407898172999007927}
   - component: {fileID: 4383178701979539234}
   - component: {fileID: 5297313365087962012}
   - component: {fileID: 4102796633426266217}
@@ -305,6 +311,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4027142361953398041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102796633426266225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8bb657d61a76d44aa8a8b7b37e64ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceBall: {fileID: 6066436145887644192, guid: 3aa100d96d64f0f4480b644a9843b2b4, type: 3}
+  Hyper_iceball: {fileID: 3310707358612323910, guid: dc21e697c86f9bd4c8e5bedb8240c2e0,
+    type: 3}
+  place: {fileID: 4439525745517047421}
+  HyperBallRotation: {fileID: 5173214955238514806}
 --- !u!114 &2303731386335038096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +369,7 @@ MonoBehaviour:
   invencibility: 0
   duringAttack: 0
   invencibilityTime: 3
+  colorRed: 0
 --- !u!114 &4102796633426266220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +385,7 @@ MonoBehaviour:
   speed: 4
   jumpForce: 20
   gravity: 45
+  friction: 0.8
   grounded: 0
   count: 1
   groundMask:
@@ -381,6 +406,22 @@ MonoBehaviour:
   side: 0
   pushForce: 10
   pushUpForce: 13
+--- !u!114 &6407898172999007927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102796633426266225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4725758119ba074448b3ff4550d381ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceBall: {fileID: 0}
+  Hyper_iceball: {fileID: 0}
+  place: {fileID: 0}
+  HyperBallRotation: {fileID: 0}
 --- !u!114 &4383178701979539234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,10 +477,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inAttackAnimation: 0
-  iceBall: {fileID: 0}
-  Hyper_iceball: {fileID: 0}
-  place: {fileID: 0}
-  HyperBallRotation: {fileID: 0}
 --- !u!114 &4102796633426266216
 MonoBehaviour:
   m_ObjectHideFlags: 0

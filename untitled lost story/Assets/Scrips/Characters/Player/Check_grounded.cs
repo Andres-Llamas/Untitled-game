@@ -81,12 +81,11 @@ public class Check_grounded : MonoBehaviour
         else if (collision.gameObject.layer == 9)//to check if is touchin ice
         {
             checkIce = false;
-            playerController.grounded = true;
+            playerController.grounded = false;
             playerController.friction = 0.8f;
-            check_grounded = true;
-            playerLife.duringAttack = false;// to desunlock moovement during enemie attack
-            animManager.DamageAnimation(false);
-            animManager.AnimJump(true);//this is to active "Ground" parameter, no to call jump animation directly
+            check_grounded = false;
+            animManager.AnimJump(false);//this is to active "Ground" parameter, no to call jum animation directly
+            footCollider.DisableFootCollider();//to enable foot collider during jump to aviod errors
         }
     }
 }

@@ -20,8 +20,7 @@ public class Hide_plataform_on_water : MonoBehaviour
         if(Freeze)
         {
             boxColl.isTrigger = false;
-            Invoke("Melt", 5f);
-            Debug.Log("freeze");
+            Invoke("Melt", 10f);
         }
     }
 

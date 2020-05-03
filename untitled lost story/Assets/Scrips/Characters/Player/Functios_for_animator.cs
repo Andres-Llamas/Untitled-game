@@ -9,19 +9,16 @@ public class Functios_for_animator : MonoBehaviour
     Sword_collision swordCollision;
     Player_collision playerBox;
     Animator_manager anim;
+    Instanciate_iceball instanceIceBall;
 
     public bool inAttackAnimation;
-
-    public GameObject iceBall;
-    public GameObject Hyper_iceball;
-    public Transform place;
-    public Transform HyperBallRotation;
 
     private void Awake()
     {
         swordCollision = GetComponentInChildren<Sword_collision>();
         playerBox = GetComponentInChildren<Player_collision>();
         anim = GetComponent<Animator_manager>();
+        instanceIceBall = GetComponent<Instanciate_iceball>();
     }
 
     public void ToLoockSpriteFlipX()//in Animator_manager
@@ -67,16 +64,15 @@ public class Functios_for_animator : MonoBehaviour
     public void ToDesableReleaseStaff()
     {
         anim.ReleaseStaff(false);
-        Debug.Log("Boooom");
     }
 
     public void ToLaunchIceBall()
     {
-        Instantiate(iceBall, place.position, place.rotation);
+        instanceIceBall.InscatnceIceBall();
     }
 
     public void ToLaunchHyperIceBall()
     {
-        Instantiate(Hyper_iceball, HyperBallRotation.position, HyperBallRotation.rotation);
+        instanceIceBall.InstanceHyperIceBall();
     }
 }

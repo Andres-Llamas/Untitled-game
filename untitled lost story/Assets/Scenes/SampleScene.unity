@@ -2221,6 +2221,7 @@ MonoBehaviour:
   playerLife: {fileID: 767106861}
   pushForce: {fileID: 767106863}
   playerController: {fileID: 834514195}
+  ground: {fileID: 0}
 --- !u!114 &778080563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2235,10 +2236,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   EnemyKnockBack: 5
-  onAttack: 0
   player: {fileID: 1549551053}
   playerController: {fileID: 834514195}
   checkGround: {fileID: 1224161306}
+  count: 3
 --- !u!114 &778080564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3220,6 +3221,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: rotati
+      value: 
+      objectReference: {fileID: 554920338}
+    - target: {fileID: 0}
+      propertyPath: trnsi
+      value: 
+      objectReference: {fileID: 2130554884}
+    - target: {fileID: 842303389395338726, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4102796632885235697, guid: 0a37f060da402944ab0fa5fbe691e18a,
         type: 3}
       propertyPath: Ice.m_Bits
@@ -3247,6 +3262,11 @@ PrefabInstance:
       propertyPath: HyperBallRotation
       value: 
       objectReference: {fileID: 554920338}
+    - target: {fileID: 4102796633426266220, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: jumpForce
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 4102796633426266221, guid: 0a37f060da402944ab0fa5fbe691e18a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3347,6 +3367,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6407898172999007927, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: iceBall
+      value: 
+      objectReference: {fileID: 6066436145887644192, guid: 3aa100d96d64f0f4480b644a9843b2b4,
+        type: 3}
+    - target: {fileID: 6407898172999007927, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: Hyper_iceball
+      value: 
+      objectReference: {fileID: 3310707358612323910, guid: dc21e697c86f9bd4c8e5bedb8240c2e0,
+        type: 3}
+    - target: {fileID: 6407898172999007927, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: HyperBallRotation
+      value: 
+      objectReference: {fileID: 554920338}
+    - target: {fileID: 6407898172999007927, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: place
+      value: 
+      objectReference: {fileID: 2130554884}
+    - target: {fileID: 8390632601572224127, guid: 0a37f060da402944ab0fa5fbe691e18a,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a37f060da402944ab0fa5fbe691e18a, type: 3}
 --- !u!1001 &7259967318586423851

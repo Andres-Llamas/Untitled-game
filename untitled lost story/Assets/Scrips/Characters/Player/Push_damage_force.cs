@@ -21,22 +21,11 @@ public class Push_damage_force : MonoBehaviour
 
     public void DamageForce(float direction)//fuerza de retroseso. this is acceded trough Enemy_damage script
     {
-        if (playrLife.invencibility == false)
-        {     
-            rb.AddForce(Vector2.up * pushUpForce, ForceMode2D.Impulse);
-            rb.AddForce(Vector2.left * direction *  pushForce, ForceMode2D.Impulse);
-            animManagger.DamageAnimation(true);// damage animation, is put in false in Check_ground script
-        }
-    }
-
-    public void UpDamageForce(float direction)//this is acceded trough Enemy_damage script
-    {
-        rb.velocity = Vector2.zero;
-        if (rb.velocity == Vector2.zero)
+        if (playrLife.invencibility == false && rb.velocity.magnitude < 22)// pa video
         {
-            rb.AddForce(Vector2.up * 12, ForceMode2D.Impulse);
-            rb.AddForce(Vector2.left * direction * 8, ForceMode2D.Impulse);
-            animManagger.DamageAnimation(true);
+            rb.AddForce(Vector2.up * pushUpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.left * direction * pushForce, ForceMode2D.Impulse);
+            animManagger.DamageAnimation(true);// damage animation, is put in false in Check_ground script
         }
     }
 }

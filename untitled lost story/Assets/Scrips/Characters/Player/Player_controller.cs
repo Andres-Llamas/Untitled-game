@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_controller : MonoBehaviour
 {
     public float speed;
-    public float jumpForce;
+    public float jumpForce = 20;
     public float gravity;
     public float friction = 0.8f;
     public bool grounded;
@@ -16,6 +16,7 @@ public class Player_controller : MonoBehaviour
     Player_life playerLife;
     Items_player_animations itemsAnim;
     Menu_manager menuManager;
+    Check_grounded groundScript;
 
     public LayerMask groundMask;
 
@@ -26,6 +27,7 @@ public class Player_controller : MonoBehaviour
         playerLife = GetComponent<Player_life>();
         itemsAnim = GetComponent<Items_player_animations>();
         menuManager = GetComponent<Menu_manager>();
+        groundScript = GetComponentInChildren<Check_grounded>();
     }
 
     void Update()
@@ -34,6 +36,11 @@ public class Player_controller : MonoBehaviour
         AttackDown();
 
         itemsAnim.AnimationsWithItem(menuManager.equipIceStaff);// to enable ice staff animations,
+
+        if(rb.velocity.magnitude > 30)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private void FixedUpdate()
