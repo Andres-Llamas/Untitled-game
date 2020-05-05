@@ -9,7 +9,6 @@ public class Extras_functions : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        iceDrop = GetComponent<Instanciate_iceball>();
     }
 
     void Start()
@@ -19,10 +18,7 @@ public class Extras_functions : MonoBehaviour
 
     void Update()
     {
-        if(iceDrop.enabled == false)
-        {
-            iceDrop.enabled = true;
-        }
+
     }
 
     public void UpSwrodDamageJump()// to jump when player uses attack down and touch an enemy, is used in Enemy_life script

@@ -15,6 +15,7 @@ public class Check_grounded : MonoBehaviour
     Player_controller playerController;
     Foot_collider footCollider;
     Player_life playerLife;
+    Hook_attack hookAtt;
 
     private void Update()
     {
@@ -27,6 +28,7 @@ public class Check_grounded : MonoBehaviour
         playerController = GetComponentInParent<Player_controller>();
         footCollider = GetComponent<Foot_collider>();
         playerLife = GetComponentInParent<Player_life>();
+        hookAtt = GetComponentInParent<Hook_attack>();
     }
 
    void DetectGround()
@@ -66,6 +68,17 @@ public class Check_grounded : MonoBehaviour
             animManager.DamageAnimation(false);
             animManager.AnimJump(true);//this is to active "Ground" parameter, no to call jump animation directly
             Debug.Log("tocando hielo");
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)//check ground
+        {
+            hookAtt.canHook = true;// to use hook again
+        }
+        else if (collision.gameObject.layer == 9)//to check if is touchin ice
+        {
+            hookAtt.canHook = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

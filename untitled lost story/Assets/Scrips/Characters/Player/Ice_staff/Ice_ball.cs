@@ -14,7 +14,7 @@ public class Ice_ball : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animMan = GameObject.FindGameObjectWithTag("EditorOnly");
+        animMan = GameObject.FindGameObjectWithTag("player positions");
         anim = GetComponent<Animator>();
     }
 

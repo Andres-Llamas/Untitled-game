@@ -9,6 +9,12 @@ TagManager:
   - Ice ball
   - Hyper ice ball
   - Water
+  - player positions
+  - Rope manager
+  - Sight
+  - Rope slop
+  - Rope
+  - Diana
   layers:
   - Default
   - TransparentFX
@@ -20,9 +26,9 @@ TagManager:
   - 
   - Ground
   - Ice
-  - 
-  - 
-  - 
+  - Etc
+  - este no sirve
+  - Diana
   - 
   - 
   - 

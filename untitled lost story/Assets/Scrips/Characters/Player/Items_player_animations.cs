@@ -12,13 +12,23 @@ public class Items_player_animations : MonoBehaviour
     }
 
 
-    public void AnimationsWithItem(bool WithIceStaff)
+    public void AnimationsWithItem(bool WithIceStaff, bool withHook)
     {
-        if(WithIceStaff)
+        if (WithIceStaff && withHook == false)
         {
             animManager.WithIceStaff(true);
+            animManager.WithHook(false);
         }
-        else
+        else if (WithIceStaff == false && withHook == false)
+        {
             animManager.WithIceStaff(false);
+            animManager.WithHook(false);
+        }
+
+        if(WithIceStaff == false && withHook)
+        {
+            animManager.WithHook(true);
+            animManager.WithIceStaff(false);
+        }
     }
 }

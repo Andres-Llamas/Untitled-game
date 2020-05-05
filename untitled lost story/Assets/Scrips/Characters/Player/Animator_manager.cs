@@ -21,6 +21,7 @@ public class Animator_manager : MonoBehaviour
     const string WITH_ICE_STAFF = "With ice staff";
     const string MANTAIN_STAFF = "mantain staff";
     const string RELEASE_STAFF = "release staff";
+    const string WITH_HOOK = "With hook";
 
     private void Awake()
     {
@@ -104,5 +105,10 @@ public class Animator_manager : MonoBehaviour
     public void ReleaseStaff(bool count)
     {
         anim.SetBool(RELEASE_STAFF, count);
+    }
+
+    public void WithHook(bool count)
+    {
+        anim.SetBool(WITH_HOOK, count);
     }
 }

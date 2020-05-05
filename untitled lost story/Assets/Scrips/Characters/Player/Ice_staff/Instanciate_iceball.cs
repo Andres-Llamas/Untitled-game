@@ -16,19 +16,18 @@ public class Instanciate_iceball : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            InscatnceIceBall();
-        }
+
     }
 
     public void InscatnceIceBall()
     {
-        Instantiate(iceBall, place.position, place.rotation);
+        Vector3 positiones = place.position;
+        Instantiate(iceBall, positiones, Quaternion.identity);
     }
 
     public void InstanceHyperIceBall()
     {
-        Instantiate(Hyper_iceball, HyperBallRotation.position, HyperBallRotation.rotation);
+        Vector3 positiones = place.position;
+        Instantiate(Hyper_iceball, positiones, HyperBallRotation.rotation);
     }
 }

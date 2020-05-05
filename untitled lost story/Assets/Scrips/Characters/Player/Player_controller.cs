@@ -6,7 +6,7 @@ public class Player_controller : MonoBehaviour
 {
     public float speed;
     public float jumpForce = 20;
-    public float gravity;
+    public float gravity = 45;
     public float friction = 0.8f;
     public bool grounded;
     public int count = 1;
@@ -17,8 +17,11 @@ public class Player_controller : MonoBehaviour
     Items_player_animations itemsAnim;
     Menu_manager menuManager;
     Check_grounded groundScript;
+    Hook_attack hookAttack;
+    public Hook_rope_manager hookRope;
 
     public LayerMask groundMask;
+    public GameObject rope;
 
     private void Awake()
     {
@@ -28,14 +31,16 @@ public class Player_controller : MonoBehaviour
         itemsAnim = GetComponent<Items_player_animations>();
         menuManager = GetComponent<Menu_manager>();
         groundScript = GetComponentInChildren<Check_grounded>();
+        hookAttack = GetComponent<Hook_attack>();
     }
 
     void Update()
     {
         Attack();
         AttackDown();
+        LaunchRope();
 
-        itemsAnim.AnimationsWithItem(menuManager.equipIceStaff);// to enable ice staff animations,
+        itemsAnim.AnimationsWithItem(menuManager.equipIceStaff, menuManager.equipHook);// to enable items animations,
 
         if(rb.velocity.magnitude > 30)
         {
@@ -45,7 +50,8 @@ public class Player_controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerLife.duringAttack == false)//to loock moovement during attack. Is reactive during check_ground script.
+        if (playerLife.duringAttack == false && hookAttack.duringHookAttack == false)
+            //to loock moovement during attack. Is reactive during check_ground script.
         {
             Walk();
             Jump();
@@ -58,6 +64,10 @@ public class Player_controller : MonoBehaviour
     {
         if (grounded == false)
         {
+            if (hookAttack.duringHookAttack == false)// to fall slowly duting hook attack
+                gravity = 45;
+            else
+                gravity = 10;
             rb.AddForce(Vector2.down * gravity, ForceMode2D.Force);
         }
     }
@@ -125,7 +135,8 @@ public class Player_controller : MonoBehaviour
         {
             animManager.AttackTrigger();
         }
-        else if(Input.GetButtonDown("Attack") && menuManager.equipIceStaff)//to attack during jump just with the ice staff
+        else if(Input.GetButtonDown("Attack") && menuManager.equipIceStaff || Input.GetButtonDown("Attack") && menuManager.equipHook)
+            //to attack during jump just with the ice staff or Hook
         {
             animManager.AttackTrigger();
         }
@@ -135,7 +146,7 @@ public class Player_controller : MonoBehaviour
     {
         if (menuManager.equipIceStaff == false)
         {
-            if (Input.GetButtonDown("Attack") && grounded == false && playerLife.duringAttack == false)
+            if (Input.GetButtonDown("Attack") && grounded == false && playerLife.duringAttack == false && menuManager.equipHook == false)
             {
                 if (count == 1)
                 {
@@ -148,6 +159,18 @@ public class Player_controller : MonoBehaviour
             {
                 count = 1;
             }
+        }
+    }
+
+    void LaunchRope()
+    {
+        if(hookRope.sightSelection)
+        {//this is to rotate the rope to the direction of the sight and then isntantiate the rope
+            Vector2 lookdir = hookRope.transform.position - this.transform.position;
+            float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
+            Instantiate(rope, this.transform.position, Quaternion.Euler(0, 0, angle));
+            Time.timeScale = 1f;
+            hookAttack.duringHookAttack = false;
         }
     }
 }
