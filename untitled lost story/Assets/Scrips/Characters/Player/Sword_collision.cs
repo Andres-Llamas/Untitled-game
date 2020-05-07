@@ -5,17 +5,35 @@ using UnityEngine;
 public class Sword_collision : MonoBehaviour
 {
     CircleCollider2D circleColl;
+    Player_controller player;
     Animator_manager animManager;
     Rigidbody2D rb;
 
+    public bool canAttack;
     public int PushUpFroce = 20;
 
     private void Awake()
     {
+        rb = GetComponentInParent<Rigidbody2D>();
+        player = GetComponentInParent<Player_controller>();
         circleColl = GetComponent<CircleCollider2D>();
         animManager = GetComponentInParent<Animator_manager>();
-        rb = GetComponentInParent<Rigidbody2D>();
         circleColl.enabled = false;
+    }
+    private void Update()
+    {
+        if(player.grounded)
+        {
+            canAttack = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy" && player.grounded == false && canAttack)
+        {
+            rb.velocity = Vector2.up * 15;
+        }
     }
 
     public void ToEnable()

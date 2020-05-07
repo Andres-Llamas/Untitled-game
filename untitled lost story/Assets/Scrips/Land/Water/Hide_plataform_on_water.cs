@@ -19,8 +19,7 @@ public class Hide_plataform_on_water : MonoBehaviour
     {
         if(Freeze)
         {
-            boxColl.isTrigger = false;
-            Invoke("Melt", 10f);
+            StartCoroutine("Melt");
         }
     }
 
@@ -35,9 +34,12 @@ public class Hide_plataform_on_water : MonoBehaviour
         }
     }
 
-    void Melt()
+    IEnumerator Melt()
     {
+        boxColl.isTrigger = false;
+        yield return new WaitForSeconds(6);
         Freeze = false;
         boxColl.isTrigger = true;
+        StopCoroutine("Melt");
     }
 }

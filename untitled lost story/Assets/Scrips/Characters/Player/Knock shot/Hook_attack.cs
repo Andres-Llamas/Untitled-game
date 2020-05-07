@@ -24,7 +24,6 @@ public class Hook_attack : MonoBehaviour
     void Update()
     {
         HookAttack();
-        
     }
 
     void HookAttack()
@@ -33,7 +32,7 @@ public class Hook_attack : MonoBehaviour
         {
             canHook = false;// this is to lock hook when used until the player touch ground, this is in check_ground script
             
-            StartCoroutine(NormalTime());
+            StartCoroutine("NormalTime");
         }
     }
 
@@ -46,7 +45,7 @@ public class Hook_attack : MonoBehaviour
         Time.timeScale = 1f;
         duringHookAttack = false;
         Debug.Log("se acabó");
-        StopCoroutine(NormalTime());        
-        //DestroyImmediate(cloneMirilla); is destroy in Hook_rope_manager;
+        StopCoroutine("NormalTime");        
+        // the rope is destroyed in Hook_rope_manager;
     }
 }

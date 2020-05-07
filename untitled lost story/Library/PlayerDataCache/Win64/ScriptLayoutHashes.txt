@@ -5,7 +5,7 @@ SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Extras_functions
+9c2738990a6d87b1e79667954fb54cd7 Assembly-CSharp.dll:.Up_force_sword
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -19,7 +19,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-e9c7a9f0d634b5e5707a26a5fad6b331 Assembly-CSharp.dll:.Enemy_life
+fdb712f2b4dac60822d0f4a4e5ec54e7 Assembly-CSharp.dll:.Enemy_life
 aa1e01a1fd389e73b781b051cc292ccb Assembly-CSharp.dll:.Hide_plataform_on_water
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 d3a702066023a35d577c17ec648c7454 Assembly-CSharp.dll:.Instanciate_iceball
@@ -123,7 +123,10 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.change_color_in_water
 fd3df9ca957ad4657320881e1cc71b4c Assembly-CSharp.dll:.sight_moovement
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.water
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Detect_player
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
+6dd4c885383f55b2168c79b7bd4dacc1 Assembly-CSharp.dll:.Diana_logic
+f8a0c41b6ba68188c95c2649a82052ad Assembly-CSharp.dll:.Detect_ground
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 09df303035eec0f33a702e37e0417893 Assembly-CSharp.dll:.Stick_with_wall
 af42135db8eff43cb7871690727faaa4 Assembly-CSharp.dll:.Functios_for_animator
@@ -166,15 +169,16 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Player_collision
+4b9a41e6a7fc8f7aaf64805cd9db4637 Assembly-CSharp.dll:.Player_collision
 3b760e6526e13f7504f59e210145899a Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
-fa91ee990c9612663e3e225bd4ef0c71 Assembly-CSharp.dll:.Sword_collision
+10599714468907befca3933c0408857d Assembly-CSharp.dll:.Sword_collision
 507174d46dacbc5fe45e28485db5dd1e Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 55ca30d007632ac92af1f3cfd52e0c67 Assembly-CSharp.dll:.To_moove_with_the_rope
 2ab135badb01573f3c44b68cd787de7c Assembly-CSharp.dll:.Player_life
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-651e6ae7b7fb0b368c63a87ecc77934b Assembly-CSharp.dll:.Enemy_damage
+eeae3bed75daee8c12736fd619fd30ec Assembly-CSharp.dll:.lazin_behaviour
 828fb1b91faec69decabe8e674268f43 Assembly-CSharp.dll:.Hook_rope_manager
+6657aa3d5331dcc6eb3afc720f6f1b5e Assembly-CSharp.dll:.verdi_walk
 9a5186b96b1355429a099019015df5de Assembly-CSharp.dll:.Check_grounded
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 a64920f3b2b270a820dee1f0201ad3c0 Assembly-CSharp.dll:.Enemy_behaviour
@@ -183,5 +187,6 @@ df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 09d367f7484b76ba65de85d83e56e6ea Assembly-CSharp.dll:.CheckRotation
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+21a800c77005d34ed8d61159be4badee Assembly-CSharp.dll:.Player_damage
 c277514f7b22ac651b853e50aeee6df4 Assembly-CSharp.dll:.Ice_staff_attack
-6dd4c885383f55b2168c79b7bd4dacc1 Assembly-CSharp.dll:.Diana_logic
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.lazin_life

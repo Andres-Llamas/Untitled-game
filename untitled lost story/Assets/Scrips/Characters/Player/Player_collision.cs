@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player_collision : MonoBehaviour
 {
-    BoxCollider2D box;
+    public BoxCollider2D box;
 
     private void Awake()
     {
-        box = GetComponent<BoxCollider2D>();
+       // box = GetComponentInChildren<BoxCollider2D>();
     }
 
     void Update()

@@ -171,6 +171,7 @@ public class Player_controller : MonoBehaviour
             Instantiate(rope, this.transform.position, Quaternion.Euler(0, 0, angle));
             Time.timeScale = 1f;
             hookAttack.duringHookAttack = false;
+            hookAttack.StopCoroutine("NormalTime");
         }
     }
 }

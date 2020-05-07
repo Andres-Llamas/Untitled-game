@@ -9,11 +9,11 @@ public class Enemy_behaviour : MonoBehaviour
     public float speed;
     public bool frozen;
     public float velocityDuringFrozen = 0;
+    bool HyperIceBall;
 
     Rigidbody2D enemyRb;
     Animator anim;
     SpriteRenderer sprite;
-    Enemy_life life;
 
     const string WALK = "movement";
     const string DEAD = "dead";
@@ -23,15 +23,20 @@ public class Enemy_behaviour : MonoBehaviour
         enemyRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        life = GetComponent<Enemy_life>();
     }
 
     void Update()
     {
+        Moovement();
+        ToQuitFrozen();
+    }
+
+    void Moovement()
+    {
         if (frozen == false)
         {
             anim.enabled = true;
-            life.NormalColor();
+            sprite.color = Color.white;
             enemyRb.velocity = Vector2.right * speed;
 
             anim.SetBool(WALK, true);
@@ -57,6 +62,40 @@ public class Enemy_behaviour : MonoBehaviour
         {
             enemyRb.velocity = Vector2.right * velocityDuringFrozen;
             anim.enabled = false;
+        }
+    }
+
+    void ToQuitFrozen()
+    {
+        if (frozen == true && HyperIceBall == false)
+        {
+            Invoke("QuitFrozen", 2.5f);
+        }
+        else if (frozen && HyperIceBall == true)
+        {
+            Invoke("QuitFrozen", 4f);
+        }
+    }
+
+    void QuitFrozen()
+    {
+        frozen = false;
+        HyperIceBall = false;        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ice ball")
+        {
+            sprite.color = Color.blue;
+            frozen = true;
+        }
+
+        else if (collision.gameObject.tag == "Hyper ice ball")
+        {
+            sprite.color = Color.blue;
+            frozen = true;
+            HyperIceBall = true;
         }
     }
 }
