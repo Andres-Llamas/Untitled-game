@@ -7,18 +7,29 @@ public class Generic_detect_player : MonoBehaviour
     public bool sideLeft;
     public bool lookPlayer;
 
+    SpriteRenderer sprite;
+
+    private void Awake()
+    {
+        sprite = GetComponentInParent<SpriteRenderer>();
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            lookPlayer = true;
+            
             if (this.gameObject.tag == "lazin rigt")
             {
-                sideLeft = true;
+                sideLeft = false; 
+                sprite.flipX = false;
+                lookPlayer = true;
             }
             else if (this.gameObject.tag == "lazin left")
             {
-                sideLeft = false;
+                sideLeft = true;
+                sprite.flipX = true;
+                lookPlayer = true;
             }
         }
     }

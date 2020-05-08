@@ -38,6 +38,9 @@ public class Pua : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this.gameObject);
+        if (collision.gameObject.tag == "player" || collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

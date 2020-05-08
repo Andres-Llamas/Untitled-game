@@ -26,7 +26,8 @@ public class Player_damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && playerLife.invencibility == false)
+        if (collision.gameObject.tag == "Enemy" && playerLife.invencibility == false 
+            || collision.gameObject.tag == "dark ball" && playerLife.invencibility == false)
         {
             float side = Mathf.Sign(collision.transform.position.x - this.transform.position.x);// the direction of the force
             pushForce.DamageForce(side);
@@ -43,7 +44,8 @@ public class Player_damage : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && playerLife.invencibility == false)
+        if (collision.gameObject.tag == "Enemy" && playerLife.invencibility == false
+            || collision.gameObject.tag == "dark ball" && playerLife.invencibility == false)
         {
             float side = Mathf.Sign(collision.transform.position.x - this.transform.position.x);// the direction of the force
             pushForce.DamageForce(side);

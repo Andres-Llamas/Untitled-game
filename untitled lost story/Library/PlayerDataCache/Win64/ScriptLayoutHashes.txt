@@ -7,6 +7,7 @@ SceneListEnd?
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 9c2738990a6d87b1e79667954fb54cd7 Assembly-CSharp.dll:.Up_force_sword
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
+dcece8070229bdf511fb7ed50e8a18d4 Assembly-CSharp.dll:.Generic_movement
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -59,6 +60,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 0a8e99d1dbc72e9c1a04b52a91b25f21 Assembly-CSharp.dll:.Rope_velocity
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
+f1514073c6773262bc7b4b0372d41696 Assembly-CSharp.dll:.Generic_detect_player
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -136,6 +138,7 @@ af42135db8eff43cb7871690727faaa4 Assembly-CSharp.dll:.Functios_for_animator
 b3ae439500c99eb75eeb85382d6c1a81 Assembly-CSharp.dll:.ropeLogic
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 cf9d09256eaceaf2fb33dcf98ee1f629 Assembly-CSharp.dll:.Ice_ball
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.verdi_detect_player
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -155,6 +158,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Items_player_animations
 35a9693c388776aaf487636491a20f11 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e1300922cc039f41ab46a47f4cb05898 Unity.TextMeshPro.dll:TMPro.TMP_Settings
+08afb68015e5f3d3f18f9e990e00b398 Assembly-CSharp.dll:.verdi_manager
 88cc9df3c6fc697bfbeacd24c0d6f2d7 UnityEngine.TestRunner.dll:UnityEngine.TestTools.BeforeAfterTestCommandState
 88cc9df3c6fc697bfbeacd24c0d6f2d7 UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
@@ -169,6 +173,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Pua
 4b9a41e6a7fc8f7aaf64805cd9db4637 Assembly-CSharp.dll:.Player_collision
 3b760e6526e13f7504f59e210145899a Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 10599714468907befca3933c0408857d Assembly-CSharp.dll:.Sword_collision
@@ -178,7 +183,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 eeae3bed75daee8c12736fd619fd30ec Assembly-CSharp.dll:.lazin_behaviour
 828fb1b91faec69decabe8e674268f43 Assembly-CSharp.dll:.Hook_rope_manager
-6657aa3d5331dcc6eb3afc720f6f1b5e Assembly-CSharp.dll:.verdi_walk
+dcece8070229bdf511fb7ed50e8a18d4 Assembly-CSharp.dll:.verdi_walk
 9a5186b96b1355429a099019015df5de Assembly-CSharp.dll:.Check_grounded
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 a64920f3b2b270a820dee1f0201ad3c0 Assembly-CSharp.dll:.Enemy_behaviour
@@ -188,5 +193,9 @@ df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 09d367f7484b76ba65de85d83e56e6ea Assembly-CSharp.dll:.CheckRotation
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 21a800c77005d34ed8d61159be4badee Assembly-CSharp.dll:.Player_damage
+fcbff9735f6ee88836814c6bb58ac5c7 Assembly-CSharp.dll:.Necrosi_vehaviour
 c277514f7b22ac651b853e50aeee6df4 Assembly-CSharp.dll:.Ice_staff_attack
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.lazin_life
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.necrosi_right
+f1514073c6773262bc7b4b0372d41696 Assembly-CSharp.dll:.detectPlayer
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.necrosi_functions_manager
+ff3b7f6b1418dca777fcd7d230c060fa Assembly-CSharp.dll:.necrosi_foot_collider

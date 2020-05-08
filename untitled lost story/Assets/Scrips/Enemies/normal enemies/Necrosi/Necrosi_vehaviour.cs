@@ -5,13 +5,20 @@ using UnityEngine;
 public class Necrosi_vehaviour : MonoBehaviour
 {
     Generic_detect_player detectPlayer;
-    Rigidbody2D rb;
-    SpriteRenderer sprite;
+    Animator anim;
+    necrosi_foot_collider foot;
+    public Rigidbody2D rb;
+
+    public bool lookPlayer;
+    public bool sideleft;
+    public int count = 1; // this is to limit the attack until necrosi apper again;
 
     private void Awake()
     {
         detectPlayer = GetComponentInChildren<Generic_detect_player>();
-        sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        foot = GetComponentInChildren<necrosi_foot_collider>();
+        //sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -22,27 +29,48 @@ public class Necrosi_vehaviour : MonoBehaviour
 
     void Update()
     {
-        ChangeSide();
-        WhenDetectPlayer();
+        AnimStop();
+        AnimWalk();
+        AnimAir();
+        if (lookPlayer/* && count > 0*/)
+        {
+            StartCoroutine("AnimAttack");
+            count -= 1;
+        }    
     }
 
-    void ChangeSide()
+    void AnimStop()
     {
-        if(detectPlayer.sideLeft)
+        if (rb.velocity.x == 0 || lookPlayer)
         {
-            sprite.flipX = true;
+            anim.SetBool("movement", false);
+        }
+    }
+
+    void AnimWalk()
+    {
+        if (rb.velocity.x > 0 || rb.velocity.x < 0)
+        {
+            anim.SetBool("movement", true);
+        }
+    }
+
+    void AnimAir()
+    {
+        if(foot.ground)
+        {
+            anim.SetBool("ground", true);
         }
         else
         {
-            sprite.flipX = false;
+            anim.SetBool("ground", false);
         }
     }
 
-    void  WhenDetectPlayer()
+    IEnumerator AnimAttack()
     {
-        if(detectPlayer.lookPlayer)
-        {
-            rb.velocity = Vector2.zero;
-        }
+        yield return new WaitForSeconds(1.5f);
+        anim.SetTrigger("attack");
+        StopCoroutine("AnimAttack");
     }
 }

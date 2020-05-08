@@ -27,7 +27,7 @@ public class Generic_movement : MonoBehaviour
     IEnumerator ToLeft()
     {
         rb.velocity = Vector2.left * speed;
-        sprite.flipX = false;
+        sprite.flipX = true;
         yield return new WaitForSeconds(timeOfChange);
         StartCoroutine("LittleStop");
         StopCoroutine("ToLeft");
@@ -54,7 +54,7 @@ public class Generic_movement : MonoBehaviour
     IEnumerator ToRight()
     {
         rb.velocity = Vector2.right * speed;
-        sprite.flipX = true;
+        sprite.flipX = false;
         yield return new WaitForSeconds(timeOfChange);
         StartCoroutine("LittleStop");
         StopCoroutine("ToRight");
