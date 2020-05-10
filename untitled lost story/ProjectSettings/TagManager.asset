@@ -21,6 +21,7 @@ TagManager:
   - verdi
   - Necrosi
   - dark ball
+  - Solid
   layers:
   - Default
   - TransparentFX

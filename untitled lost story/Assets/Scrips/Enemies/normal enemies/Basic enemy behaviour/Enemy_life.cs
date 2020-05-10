@@ -42,6 +42,15 @@ public class Enemy_life : MonoBehaviour
             sprite.color = Color.red;
             Invoke("NormalColor", 0.5f);
         }
+
+        if(life <=0)
+        {
+            anim.SetBool("dead", true);
+        }
+        else
+        {
+            anim.SetBool("dead", false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

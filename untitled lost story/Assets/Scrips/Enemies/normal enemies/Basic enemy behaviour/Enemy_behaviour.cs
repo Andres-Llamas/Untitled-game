@@ -14,8 +14,9 @@ public class Enemy_behaviour : MonoBehaviour
     Rigidbody2D enemyRb;
     Animator anim;
     SpriteRenderer sprite;
+    Enemy_life life;
 
-    const string WALK = "movement";
+    const string WALK = "moovement";
     const string DEAD = "dead";
 
     void Start()
@@ -23,12 +24,22 @@ public class Enemy_behaviour : MonoBehaviour
         enemyRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        life = GetComponentInChildren<Enemy_life>();
     }
 
     void Update()
     {
         Moovement();
         ToQuitFrozen();
+        if(life.life <=0)
+        {
+            Invoke("ToDestroy", 0.5f);
+        }
+    }
+
+    void ToDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     void Moovement()

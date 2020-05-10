@@ -15,12 +15,13 @@ public class lazin_behaviour : MonoBehaviour
     public GameObject player;
     public Rigidbody2D rb;
     Animator anim;
+    Enemy_life life;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        life = GetComponentInChildren<Enemy_life>();
     }
 
     void Start()
@@ -35,7 +36,10 @@ public class lazin_behaviour : MonoBehaviour
             Jump();
         }
 
-        
+        if(life.life <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void Jump()

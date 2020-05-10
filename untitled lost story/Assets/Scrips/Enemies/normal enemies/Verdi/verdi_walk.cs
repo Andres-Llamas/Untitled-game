@@ -12,11 +12,13 @@ public class verdi_walk : MonoBehaviour
 
     public Rigidbody2D rb;
     SpriteRenderer sprite;
+    Animator anim;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Start()
@@ -32,6 +34,7 @@ public class verdi_walk : MonoBehaviour
 
     IEnumerator ToLeft()
     {
+        anim.SetBool("moovement", true);
         rb.velocity = Vector2.left * speed;
         sprite.flipX = false;
         yield return new WaitForSeconds(timeOfChange);
@@ -43,6 +46,7 @@ public class verdi_walk : MonoBehaviour
     {
         if(rb.velocity.x > 0)
         {
+            anim.SetBool("moovement", false);
             rb.velocity = Vector2.zero;
             yield return new WaitForSeconds(delay);
             StartCoroutine("ToLeft");
@@ -50,6 +54,7 @@ public class verdi_walk : MonoBehaviour
         }
         else
         {
+            anim.SetBool("moovement", false);
             rb.velocity = Vector2.zero;            
             yield return new WaitForSeconds(delay);
             StartCoroutine("ToRight");
@@ -59,6 +64,7 @@ public class verdi_walk : MonoBehaviour
 
     IEnumerator ToRight()
     {
+        anim.SetBool("moovement", true);
         rb.velocity = Vector2.right * speed;
         sprite.flipX = true;
         yield return new WaitForSeconds(timeOfChange);

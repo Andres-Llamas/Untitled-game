@@ -6,6 +6,7 @@ public class necrosi_functions_manager : MonoBehaviour
 {
     Necrosi_vehaviour necrosi;
     Animator anim;
+    Enemy_life life;
 
     public GameObject darkPower;
 
@@ -13,6 +14,7 @@ public class necrosi_functions_manager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         necrosi = GetComponent<Necrosi_vehaviour>();
+        life = GetComponentInChildren<Enemy_life>();
     }
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,15 @@ public class necrosi_functions_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(life.life <=0)
+        {
+            Invoke("ToDestroy", 0.5f);
+        }
+    }
+
+    public void ToDestroy()
+    {
+        Destroy(this.gameObject);
     }
 
     public void ToLaunchDarkBall()

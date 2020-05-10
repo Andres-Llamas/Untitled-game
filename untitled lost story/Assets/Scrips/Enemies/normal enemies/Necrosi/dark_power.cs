@@ -11,6 +11,7 @@ public class dark_power : MonoBehaviour
 
     public int speed;
     public float grade;
+    public float timeToDesapear = 3.7f;
 
     private void Awake()
     {
@@ -26,23 +27,25 @@ public class dark_power : MonoBehaviour
     {
         this.transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         FollowPlayer();
+        Invoke("ToDestroi",timeToDesapear);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" || collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
+        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Solid" 
+            || collision.gameObject.tag == "Hyper ice ball")
         {
             Destroy(this.gameObject);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.layer == 8 || collision.gameObject.layer == 9)
         {
             Destroy(this.gameObject);
         }
-    }
+    }*/
 
     private void OnBecameInvisible()
     {
@@ -54,5 +57,10 @@ public class dark_power : MonoBehaviour
         Vector2 lookdir = player.transform.position - this.transform.position;
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg + grade;
         this.transform.rotation = Quaternion.Euler(1,1,angle);
+    }
+
+    void ToDestroi()
+    {
+        Destroy(this.gameObject);
     }
 }
